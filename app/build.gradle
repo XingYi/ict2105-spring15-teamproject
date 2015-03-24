@@ -5,8 +5,8 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "edu.singaporetech.ict2105.teamproject"
-        minSdkVersion 14
+        applicationId "com.example.insite.insite"
+        minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
