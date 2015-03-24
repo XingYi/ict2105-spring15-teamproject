@@ -4,5 +4,18 @@
     <string name="app_name">teamproject</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="spinner_Heading">Filter defects records by : </string>
+    <string name="report_issue">Report An Issue</string>
+    <string-array name="filter_defects">
+        <item name="filter_All">All</item>
+        <item name="filter_Unresolved">Unresolved</item>
+        <item name="filter_Resolved">Resolved</item>
+    </string-array>
+   <string-array name="hardcoded_defects_records">
+       <item>Broken Door</item>
+       <item>Lift breakdown</item>
+       <item>School Gate Stuck</item>
+   </string-array>
+
 
 </resources>

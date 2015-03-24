@@ -1,11 +1,11 @@
 package edu.singaporetech.ict2105.teamproject;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
 
 public class MainActivity extends ActionBarActivity {
 
@@ -15,6 +15,26 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // ADDED BY : Yeong Chai 25 MAR 2015
+
+        setTitle("Issue List");    // Changes the title of the activity
+
+        // EXTRA STEPS NEEDED FOR ANDROID LOLLIPOP AND ABOVE
+        // ****************************************************
+        // As ActionBar was generalized by Toolbar (beginning from Android 5.0), app icon and logo
+        // will not be shown (by default) on the toolbar to support its Material Design UI theme.
+        // https://developer.android.com/reference/android/widget/Toolbar.html
+
+        // However we insist to include the logo to provide a consistent UI
+        // among different versions of Android OS and an unique identity
+        // of our app.
+        ActionBar myActionBar = getSupportActionBar();    // Gets a reference of the ActionBar object from the Activity
+        myActionBar.setLogo(R.drawable.title_icon);    // Attach the app logo (from the drawable res) onto the ActionBar
+        myActionBar.setDisplayUseLogoEnabled(true);    // Informs Android that we will be displaying logo on ActionBar
+        myActionBar.setDisplayShowHomeEnabled(true);    // Informs Android to show up the HOME on ActionBar
+
+
         Log.d(TAG, "Test logging message");
 
         // Xing Yi - Friday, 23 Jan 2015
@@ -23,6 +43,7 @@ public class MainActivity extends ActionBarActivity {
             Log.d(TAG, "savedInstanceState is not NULL");
         }
         // End Xing Yi
+
     }
 
 
